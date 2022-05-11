@@ -37,6 +37,6 @@ sct.forever([
 ```
 
 ## All Functions
-Get ready! Here we've written out all of the functions added to this extention.
+Get ready! Here we've written out all of the functions added to this extention. These are also on the [Scratch Tool Website](https://js-scratchtool.rabitailleow.repl.co)
 #### Say()
 ***Arguments:*** msg - Message
