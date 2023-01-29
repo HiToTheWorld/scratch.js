@@ -1,10 +1,10 @@
-# JS-Scratch-Tool 1.0.0
+# sratch.js 1
 Have you ever wanted to be a scripter, but only know Scratch/Block coding? If so, then you might want to check out this JavaScript extention! This extention has blocks from Scratch in JavaScript to give you an idea on how line-coding works.
 **This JS extention is only available for use with HTML, JS, and CSS - Other types like Node.js will be in a future update.
 
 ## Setting Up
 This section will explain how to set up the extention.
-1. Download the file "scratchtool.js" from [this page](https://github.com/rabitailleow/JS-Scratch-Tool/releases)
+1. Download the file "scratch.js" from [this page](https://github.com/rabitailleow/scratch.js/releases)
 2. Import the file into the directory where your main JS file is (If your somewhat familiar with directory linking, you can put it somwhere else)
 3. On your main JS file, type or paste the folowing code ``import * as sct from './scratchtool.js';`` (if you placed scratchtool.js in a different directory, link it instead of ``./scratchtool.js``
 4. Your all set up! Check out the [Usage](#usage) section for information on how to use the extention.
