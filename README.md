@@ -45,3 +45,6 @@ This section will teach how to use the extention.
 ``sprite.xposition`` Returns the x-position of the sprite  
 ``sprite.yposition`` Returns the y-position of the sprite  
 ``sprite.direction`` Returns the direction of the sprite  
+
+### Control
+``Forever(function () {})`` Loops the argumented function forever  
