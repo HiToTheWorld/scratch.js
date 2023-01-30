@@ -1,42 +1,47 @@
 # sratch.js 1
 Have you ever wanted to be a scripter, but only know Scratch/Block coding? If so, then you might want to check out this JavaScript extention! This extention has blocks from Scratch in JavaScript to give you an idea on how line-coding works.
-**This JS extention is only available for use with HTML, JS, and CSS - Other types like Node.js will be in a future update.
+**This JS extention is only available for use with HTML, JS, and CSS - Other types like Node.js will be in a future update.**
 
 ## Setting Up
 This section will explain how to set up the extention.
 1. Download the file "scratch.js" from [this page](https://github.com/rabitailleow/scratch.js/releases)
-2. Import the file into the directory where your main JS file is (If your somewhat familiar with directory linking, you can put it somwhere else)
-3. On your main JS file, type or paste the folowing code ``import * as sct from './scratchtool.js';`` (if you placed scratchtool.js in a different directory, link it instead of ``./scratchtool.js``
+2. Import the file into the root directory or somewhere where you will remember it
+3. On any html page you wish to have scratch on, type or paste ``<script src='scratch.js'>`` somewhere reasonable in your code and replace the src attribute with the path to your scratch.js file
 4. Your all set up! Check out the [Usage](#usage) section for information on how to use the extention.
 
 ## Usage
 This section will teach how to use the extention.
 
-1. In the [Setting Up](#setting-up) section, we had you import the scratchtool.js file. on that line, after ``import * as`` is a variable name. To call the Scratch Tool, simply type that variable.
-2. The variable cannot be on its own, or it will throw an error. Add the name of the function after the variable with a dot. Then add parenthasis at the end. ``sct.say();``
-3. Different function call for different arguments. Add the corresponding arguments in the parenthesis, like so: ``sct.say('Hello World~');``
+1. Learning the basics of JavaScript  
+**If your pretty well familiar with JavaScript (or any coding language for that matter) you can skip this step.**  
+- Define a varible with ``let``, ``var``, or ``const``. Each of these will change the way that the variable works. ``let`` declares a block-scoped variable meaning it only works within the current function or block of code. ``var`` declares a gloabally-scoped variable meaning you can use it anywhere in your code. ``const`` declares a variable that cannot be changed.  
+- Classes can be called with just the class name, such as ``Math.PI``, or by creating a new instance of the class, such as ``const class = new Class()``.
+- Unfortunetly we are unable to include booleans because it would be way too much work for users and would not work like scratch, so you need to learn ``if`` statements. Declare one like so; ``if (<boolean>) {<code>}`` Booleans can be declared as follows; ``Is equal to: ==`` ``Is greater than: >`` ``Is less than: <`` ``And: &&`` ``Or: ||`` (Or uses virtical bars (above enter/return key)) You may look up others if you need to.
 
-### Adding loops and events
-Adding loops and events can be a little difficult, so here we will break it down. Although they are alike, they have some differences, so we will split them here.
+2. Sprites
+- Sprites can be declared with ``let <sprite name> = new Sprite("<sprite costume path>");``
+- Sprite functions can be accessed through the sprite like so; ``sprite.GoTo(0, 0);``
+- Sprite variables can be accessed by calling them through the sprite; ``sprite.xposition``
 
-#### Loops
-1. Define your loop. ``sct.forever()``
-2. For a repeat _ times loop, you must define the number of times. Do that first: ``sct.repeat(10, [])``
-3. Define the after events. The functions must be functions in an array, like so: ``sct.forever([sct.say('Hello'), sct.say('World!')]);``
+## Usefulness List
+### Motion
+``sprite.Move(10);`` Move in the direction it is facing by 10 steps  
+``sprite.TurnRight(15);`` Turn 15 degrees right (clockwise)  
+``sprite.TurnLeft(15);`` Turn 15 degrees left (counter-clockwise)  
 
-<!-- #### Events
-1. Define your event with a name. We chose stage clicked ``sct.event('stage-clicked', )`` -->
+``sprite.GoToRandomPosition();`` Move the sprite to a random position  
+``sprite.GoTo(36, 28);`` Move the sprite to (x: 36, y: 28)  
+``sprite.GlideTo(mouse, 1);`` Glide to the mouse-pointer for 1 second (you may sub out mouse for any other sprite)  
+``sprite.GlideTo(0, 0, 1);`` Glide to (x: 0, y: 0) for one second  
 
-To make your code a bit neater, I suggest making the functions new lines of code:
+``sprite.PointInDirection(90);`` Look 90 degrees  
+``sprite.PointTowards(mouse);`` Look at mouse pointer (you may sub out mouse for any other sprite)  
 
-```
-sct.forever([
-  sct.say('Hello'), 
-  sct.say('World!')
-]);
-```
+``sprite.ChangeXBy(10);`` Changes the x-position by 10  
+``sprite.SetXTo(36);`` Sets the x-position to 36  
+``sprite.ChangeYBy(10);`` Changes the y-position by 10  
+``sprite.SetYTo(28);`` Sets the y-position to 28  
 
-## All Functions
-Get ready! Here we've written out all of the functions added to this extention. These are also on the [Scratch Tool Website](https://js-scratchtool.rabitailleow.repl.co)
-#### Say()
-***Arguments:*** msg - Message
+``sprite.xposition`` Returns the x-position of the sprite  
+``sprite.yposition`` Returns the y-position of the sprite  
+``sprite.direction`` Returns the direction of the sprite  
